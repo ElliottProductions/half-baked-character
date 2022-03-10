@@ -20,13 +20,30 @@ let middleChanges = 0;
 let bottomChanges = 0;
 // set state for all of the character's catchphrases
 let catchphrases = [];
-//////trying for naming stretchgoal
+//////trying for naming stretchgoal---or rather, my own interpretation of it
 let headCurrent = '';
 
 let birdName = '';
 let duckName = '';
 let dogName = '';
 let horseName = '';
+///////
+let headArr = [{ display: 'duck', value: '1' }, { display: 'bird', value: '2' }, { display: 'horse', value: '3' }, { display: 'dog', value: '4' }];
+
+
+
+for (let head of headArr){
+    const option = document.createElement('option');
+
+    option.classList.add('option');
+    option.textContent = head.display;
+
+    headDropdown.append(option);
+}
+
+
+let middleArr = [];
+let bottomArr = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -143,3 +160,8 @@ function getCurrentHeadName() {
         nameEl.textContent = `${horseName}`;
     }
 }
+
+                        //<option value="bird">Bird</option>
+                        //<option value="duck">Duck</option>
+                       // <option value="dog">Dog</option>
+                        //<option value="horse">Horse</option>

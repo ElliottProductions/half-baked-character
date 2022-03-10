@@ -42,8 +42,8 @@ for (let head of headArr){
 }
 
 
-let middleArr = [];
-let bottomArr = [];
+//let middleArr = [];
+//let bottomArr = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
@@ -74,7 +74,6 @@ middleDropdown.addEventListener('change', () => {
     // update the stats to show the new count (call displayStats() to do this work)
     displayStats();
 
-    middleCurrent = `${chosenMiddle}`;
 });
 
 
@@ -88,7 +87,6 @@ bottomDropdown.addEventListener('change', () => {
     // update the stats to show the new count (call displayStats() to do this work)
     displayStats();
 
-    bottomCurrent = `${chosenBottom}`;
 });
 
 catchphraseButton.addEventListener('click', () => {

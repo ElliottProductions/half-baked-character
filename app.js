@@ -42,18 +42,8 @@ headDropdown.addEventListener('change', () => {
 
     nameEl.textContent = '';
 
-    if (headCurrent === 'bird') {
-        nameEl.textContent = `${birdName}`
-    }
-    if (headCurrent === 'duck') {
-        nameEl.textContent = `${duckName}`
-    }
-    if (headCurrent === 'dog') {
-        nameEl.textContent = `${dogName}`
-    }
-    if (headCurrent === 'horse') {
-        nameEl.textContent = `${horseName}`
-    }
+    getCurrentHeadName();
+
 });
 
 
@@ -136,5 +126,20 @@ function displayCatchphrases() {
         div.textContent = phrase;
 
         catchphrasesEl.append(div);
+    }
+}
+
+function getCurrentHeadName() {
+    if (headCurrent === 'bird') {
+        nameEl.textContent = `${birdName}`;
+    }
+    if (headCurrent === 'duck') {
+        nameEl.textContent = `${duckName}`;
+    }
+    if (headCurrent === 'dog') {
+        nameEl.textContent = `${dogName}`;
+    }
+    if (headCurrent === 'horse') {
+        nameEl.textContent = `${horseName}`;
     }
 }

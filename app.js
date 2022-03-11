@@ -28,15 +28,16 @@ let duckName = '';
 let dogName = '';
 let horseName = '';
 ///////
-let headArr = [{ display: 'duck', value: '1' }, { display: 'bird', value: '2' }, { display: 'horse', value: '3' }, { display: 'dog', value: '4' }];
+let headArr = [{ display: 'Duck Head', value: 'duck' }, { display: 'Bird Head', value: 'bird' }, { display: 'Horse Head', value: 'horse' }, { display: 'Dog Head', value: 'dog' }];
 
 
 
 for (let head of headArr){
     const option = document.createElement('option');
 
-    option.classList.add('option');
+    option.classList.add('head');
     option.textContent = head.display;
+    option.value = head.value;
 
     headDropdown.append(option);
 }
